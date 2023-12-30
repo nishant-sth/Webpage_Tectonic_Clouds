@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="companyForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="education">Education:</label>
+    <input type="text" id="education" name="education" required>
+
+    <label for="experience">Experience:</label>
+    <textarea id="experience" name="experience" rows="3" required></textarea>
+
+    <label for="contactNumber">Contact Number:</label>
+    <input type="tel" id="contactNumber" name="contactNumber" pattern="\d{10}" required>
+    <small>Enter a valid 10-digit phone number.</small>
+
+    <!-- Additional fields can be added as needed -->
+
+    <div class="error-message" id="error-message"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
